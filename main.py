@@ -34,7 +34,9 @@ class StudentData(BaseModel):
     stress_level            : Literal['Medium', 'Low', 'Very High', 'High']
 
 
-
+@app.get('/')
+def greet():
+    return {'Welcome to Health Prediction Model'}
 
 # Describe what we send back
 class PredictionResponse(BaseModel):
